@@ -9,7 +9,9 @@ export const searchRecipeByTitle = async(title: string) => {
         const recipeBlogCollection = collection(db, 'recipes-blog');
         
         // build a query
-        const recipeQuery = query(recipeBlogCollection, where ('title', '==', title ));
+        // const recipeQuery = query(recipeBlogCollection, where ('title', '==', title ));
+        const recipeQuery = query(recipeBlogCollection, where ('title', '>=', title ),  where('title', '<=', title + '\uf8ff'));
+
         
         //execute the query
         const querySnapshot = await getDocs(recipeQuery);
