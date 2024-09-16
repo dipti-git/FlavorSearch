@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Receipe Blog",
+  title: "Flavor Search",
   description: "Created with ❤",
 };
 

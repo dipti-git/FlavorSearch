@@ -7,6 +7,7 @@ import { Recipe } from "../../utils/types";
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
+
 const FoodiePage = () => {
   //Extract title from URL
   const searchParams = useSearchParams();

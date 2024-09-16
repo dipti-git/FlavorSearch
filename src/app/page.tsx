@@ -6,7 +6,7 @@ export default function Home() {
     <div className={styles.page}>
     <header className={styles.hero}>
       <h1>
-        <span>FlavorQuest</span> - Discover Your Next Favorite Recipe
+        <span>FlavorSearch</span> - Discover Your Next Favorite Recipe
       </h1>
     </header>
     <main className={styles.main}>
