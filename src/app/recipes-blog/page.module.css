@@ -1,0 +1,122 @@
+.recipesBlogContainer {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .recipesBlogTitle {
+    font-size: 2.5rem;
+    color: #ff7043;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif;
+  }
+  
+  .recipesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .recipeItem {
+    width: 300px;
+    /* border: 2px solid #ffcc80; */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .recipeItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .recipeImage {
+    width: 100%;
+    height: 80%;
+    /* height: 200px; */
+    object-fit: cover;
+    /* border-bottom: 2px solid #ffcc80; */
+  }
+  
+  .recipeTitle {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    background-color: #ff7043; /* Title background color */
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    /* bottom: 0; 
+    width: 100%;  */
+    box-sizing: border-box;
+  }
+
+
+
+/* .recipesBlogContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa; 
+  min-height: 100vh; 
+}
+
+.recipesBlogTitle {
+  font-size: 2.5rem;
+  color: #ff7043;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif; 
+}
+
+.recipesList {
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+  max-width: 800px;
+}
+
+.recipeItem {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.recipeItem:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.recipeImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover; 
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.recipeLink {
+  color: #ff7043;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+} */
