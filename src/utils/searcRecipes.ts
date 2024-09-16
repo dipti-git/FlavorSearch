@@ -32,7 +32,7 @@ export const searchRecipeByTitle = async(title: string) => {
         return recipeList;
         
         } else {
-            throw new Error('Recipe not found')
+            return [];
         }
     } catch (error) {
         console.error('Error fetching recipe:', error);

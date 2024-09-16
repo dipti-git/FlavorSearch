@@ -1,13 +1,102 @@
-.resultsContainer {
+.recipesBlogContainer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recipesBlogTitle {
+  font-size: 2.5rem;
+  color: #ff7043;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Georgia', serif;
+}
+
+.recipesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.recipeItem {
+  width: 300px;
+  /* border: 2px solid #ffcc80; */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipeItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.recipeImage {
+  width: 100%;
+  height: 80%;
+  /* height: 200px; */
+  object-fit: cover;
+  /* border-bottom: 2px solid #ffcc80; */
+}
+
+.recipeTitle {
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  background-color: #ff7043; /* Title background color */
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: absolute; */
+  /* bottom: 0; 
+  width: 100%;  */
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+ .resultsContainer {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #fafafa; /* Light background for the whole page */
+    background-color: #fafafa; 
   }
   
   .title {
     font-size: 2.5rem;
-    color: #ff7043; /* Main title color */
+    color: #ff7043; 
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Georgia', serif;
@@ -20,7 +109,7 @@
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-    text-decoration: none; /* Remove default link styling */
+    text-decoration: none; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
     cursor: pointer;
@@ -36,13 +125,13 @@
   
   .resultCard img {
     width: 100%;
-    height: 200px; /* Fixed height for uniform images */
-    object-fit: cover; /* Cover the area of the image */
+    height: 200px; 
+    object-fit: cover; 
   }
   
   .resultContent {
     padding: 15px;
-    background-color: #ffe0b2; /* Light background for content */
+    background-color: #ffe0b2; 
   }
   
   .resultContent h3 {
@@ -57,8 +146,8 @@
     color: #666;
     line-height: 1.6;
     margin: 0;
-  }
-  
+  } 
+     */
 
 
 

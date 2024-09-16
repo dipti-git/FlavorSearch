@@ -1,5 +1,7 @@
 import styles from "./page.module.css";
 import SearchBar from "@/components/SearchBar";
+import RecipesBlog from "../app/recipes-blog/page";
+
 
 export default function Home() {
   return (
@@ -8,11 +10,16 @@ export default function Home() {
       <h1>
         <span>FlavorSearch</span> - Discover Your Next Favorite Recipe
       </h1>
-    </header>
     <main className={styles.main}>
       <SearchBar />
     </main>
-    <section className={styles.features}>
+    </header>
+    <section>
+      {/* <RecipesBlog /> */}
+
+    </section>
+
+    {/* <section className={styles.features}>
       <div className={styles.featureCard}>
         <h2 className={styles.featureTitle}>Explore Cuisines</h2>
         <p className={styles.featureDescription}>
@@ -31,8 +38,8 @@ export default function Home() {
           Check out our featured recipe each week, handpicked for its taste, simplicity, and popularity.
         </p>
       </div>
-      {/* Add more feature cards as needed */}
-    </section>
+ 
+    </section> */}
     <footer className={styles.footer}>
       Created with ❤ only for you!
     </footer>

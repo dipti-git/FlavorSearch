@@ -20,3 +20,57 @@
   .searchInput:focus {
     border-color: #ff7043;
   }
+
+  
+  .recipesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .recipeItem {
+    width: 300px;
+    /* border: 2px solid #ffcc80; */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .recipeItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .recipeImage {
+    width: 100%;
+    height: 80%;
+    /* height: 200px; */
+    object-fit: cover;
+    /* border-bottom: 2px solid #ffcc80; */
+  }
+  
+  .recipeTitle {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    background-color: #ff7043; /* Title background color */
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    /* bottom: 0; 
+    width: 100%;  */
+    box-sizing: border-box;
+  }

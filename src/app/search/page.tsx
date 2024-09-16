@@ -33,48 +33,52 @@ const FoodiePage = () => {
     fetchRecipes();
   }, [title]);
   return (
-    <div className={styles.pageContainer}>
-      <h1 className={styles.title}>Recipes Search Result</h1>
-      <ul className={styles.recipesList}>
-        {recipes &&
-          recipes.map((recipe) => (
-            <li>
-              <Link
-                key={recipe.recipeId}
-                href={`recipes-blog/${recipe.recipeId}`}
-                passHref
-              >
-                <div className={styles.resultCard}>
-                  {/* <img src={recipe.imageUrl} alt={recipe.title} /> */}
-                  <div className={styles.resultContent}>
-                    <h3>{recipe.title}</h3>
-                    <p>{recipe.introduction.slice(0, 100)}...</p>{" "}
-                    {/* Preview the intro */}
-                  </div>
-                </div>
-              </Link>
-            </li>
-          ))}
-      </ul>
-    </div>
+    <div  className={styles.recipesBlogContainer}>
+    <h1 className={styles.recipesBlogTitle}>Recipes Blog</h1>
+    <ul className={styles.recipesList}>
+      {recipes &&
+        recipes.map((recipe) => (
+          <li key={recipe.recipeId} className={styles.recipeItem}>
+            {recipe.imageUrl ? (
+               <img src={recipe.imageUrl} alt={recipe.title}  className={styles.recipeImage} />
+              ): (
+                <p> No image url available</p>
+              )}
+            <Link href={`recipes-blog/${recipe.recipeId}`} className={styles.recipeTitle}>
+              {recipe.title}
+            </Link>
+          </li>
+        ))}
+    </ul>
+    {error && <p>{error}</p>}
+  </div>
   );
 };
 
 export default FoodiePage;
 
-{
-  /* <div className={styles.pageContainer}>
-<h1 className={styles.title}>Recipes Blog</h1>
+
+{/* <div className={styles.pageContainer}>
+<h1 className={styles.title}>Recipes Search Result</h1>
 <ul className={styles.recipesList}>
   {recipes &&
     recipes.map((recipe) => (
-      <li key={recipe.recipeId} className={styles.recipeItem}>
-         <img src={recipe.imageUrl} alt={recipe.title} className={styles.recipeImage} />
-        <Link href={`recipes-blog/${recipe.recipeId}`} className={styles.recipeTitle}>
-          {recipe.title}
-        </Link>
-      </li>
-    ))}
-</ul>
-</div> */
-}
+      <li>
+        <Link
+          key={recipe.recipeId}
+          href={`recipes-blog/${recipe.recipeId}`}
+          passHref
+        >
+          <div className={styles.resultCard}>
+            {/* <img src={recipe.imageUrl} alt={recipe.title} /> */}
+//             <div className={styles.resultContent}>
+//               <h3>{recipe.title}</h3>
+//               <p>{recipe.introduction.slice(0, 100)}...</p>{" "}
+//               {/* Preview the intro */}
+//             </div>
+//           </div>
+//         </Link>
+//       </li>
+//     ))}
+// </ul>
+// </div> */}

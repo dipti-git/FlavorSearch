@@ -23,7 +23,7 @@ const RecipesBlog = () => {
   }, []);
   return (
     <div  className={styles.recipesBlogContainer}>
-      <h1 className={styles.recipesBlogTitle}>Recipes Blog</h1>
+      {/* <h1 className={styles.recipesBlogTitle}>Recipes Blog</h1> */}
       <ul className={styles.recipesList}>
         {recipes &&
           recipes.map((recipe) => (
