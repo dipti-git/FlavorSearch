@@ -13,17 +13,14 @@ const SearchBar = () => {
   const [query, setQuery] = useState<string>("");
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [debouncedQuery, setDebouncedQuery] = useState<string>("");
-  const [allRecipes, setAllRecipes] = useState<Recipe[] >([]);
+  const [allRecipes, setAllRecipes] = useState<Recipe[]>([]);
   const router = useRouter();
 
   useEffect(() => {
-
     const fetchAllRecipes = async () => {
-
       const data = await getAllRecipes();
       setAllRecipes(data);
-
-    }
+    };
     fetchAllRecipes();
   }, []);
 
@@ -38,7 +35,7 @@ const SearchBar = () => {
       clearTimeout(handler);
     };
   }, [query]);
-  
+
   useEffect(() => {
     if (debouncedQuery) {
       const fetchRecipes = async () => {
@@ -98,41 +95,52 @@ const SearchBar = () => {
           className={styles.searchInput}
         />
       </div>
-      {recipes.length  > 0 &&  query !== '' && (
+      {recipes.length > 0 &&
+        query !== "" &&
         recipes.map((recipe) => (
           <li key={recipe.recipeId} className={styles.recipeItem}>
-          {recipe.imageUrl ? (
-             <img src={recipe.imageUrl} alt={recipe.title}  className={styles.recipeImage} />
-            ): (
+            {recipe.imageUrl ? (
+              <img
+                src={recipe.imageUrl}
+                alt={recipe.title}
+                className={styles.recipeImage}
+              />
+            ) : (
               <p> No image url available</p>
             )}
-          <Link href={`recipes-blog/${recipe.recipeId}`} className={styles.recipeTitle}>
-            {recipe.title}
-          </Link>
-        </li>
-        )))
+            <Link
+              href={`recipes-blog/${recipe.recipeId}`}
+              className={styles.recipeTitle}
+            >
+              {recipe.title}
+            </Link>
+          </li>
+        ))}
 
-      }
-
-
- { query === '' &&      <ul className={styles.recipesList}>
-        {allRecipes &&
-          allRecipes.map((recipe) => (
-            <li key={recipe.recipeId} className={styles.recipeItem}>
-              {recipe.imageUrl ? (
-                 <img src={recipe.imageUrl} alt={recipe.title}  className={styles.recipeImage} />
-                ): (
+      {query === "" && (
+        <ul className={styles.recipesList}>
+          {allRecipes &&
+            allRecipes.map((recipe) => (
+              <li key={recipe.recipeId} className={styles.recipeItem}>
+                {recipe.imageUrl ? (
+                  <img
+                    src={recipe.imageUrl}
+                    alt={recipe.title}
+                    className={styles.recipeImage}
+                  />
+                ) : (
                   <p> No image url available</p>
                 )}
-              <Link href={`recipes-blog/${recipe.recipeId}`} className={styles.recipeTitle}>
-                {recipe.title}
-              </Link>
-            </li>
-          ))}
-      </ul>
-        }
-       
-        
+                <Link
+                  href={`recipes-blog/${recipe.recipeId}`}
+                  className={styles.recipeTitle}
+                >
+                  {recipe.title}
+                </Link>
+              </li>
+            ))}
+        </ul>
+      )}
     </>
   );
 };

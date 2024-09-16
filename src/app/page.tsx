@@ -2,24 +2,20 @@ import styles from "./page.module.css";
 import SearchBar from "@/components/SearchBar";
 import RecipesBlog from "../app/recipes-blog/page";
 
-
 export default function Home() {
   return (
     <div className={styles.page}>
-    <header className={styles.hero}>
-      <h1>
-        <span>FlavorSearch</span> - Discover Your Next Favorite Recipe
-      </h1>
-    <main className={styles.main}>
-      <SearchBar />
-    </main>
-    </header>
-    <section>
-      {/* <RecipesBlog /> */}
+      <header className={styles.hero}>
+        <h1>
+          <span>FlavorSearch</span> - Discover Your Next Favorite Recipe
+        </h1>
+        <main className={styles.main}>
+          <SearchBar />
+        </main>
+      </header>
+      <section>{/* <RecipesBlog /> */}</section>
 
-    </section>
-
-    {/* <section className={styles.features}>
+      {/* <section className={styles.features}>
       <div className={styles.featureCard}>
         <h2 className={styles.featureTitle}>Explore Cuisines</h2>
         <p className={styles.featureDescription}>
@@ -40,18 +36,13 @@ export default function Home() {
       </div>
  
     </section> */}
-    <footer className={styles.footer}>
-      Created with ❤ only for you!
-    </footer>
-  </div>
+      <footer className={styles.footer}>Created with ❤ only for you!</footer>
+    </div>
   );
 }
 
-
-
-
-
-{/* <div className={styles.page}>
+{
+  /* <div className={styles.page}>
       <header className={styles.hero}>
           <h1>
             <span>FlavorQuest</span> - Discover Your Next Favorite Recipe</h1>
@@ -64,4 +55,5 @@ export default function Home() {
       <footer className={styles.footer}>
       Created with ❤ only for you!
       </footer>
-    </div> */}
+    </div> */
+}
